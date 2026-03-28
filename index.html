@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Daily Grind — Твой идеальный старт дня</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a href="#top" class="logo">
+        <span class="logo__icon">&#9749;</span>
+        <span class="logo__text">The Daily Grind</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Открыть меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" id="mainNav">
+        <ul class="nav__list">
+          <li><a href="#top"      class="nav__link">Главная</a></li>
+          <li><a href="#menu"     class="nav__link">Меню</a></li>
+          <li><a href="#about"    class="nav__link">О нас</a></li>
+          <li><a href="#contact"  class="nav__link">Контакты</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__overlay"></div>
+    <div class="container hero__content">
+      <p class="hero__eyebrow">Добро пожаловать</p>
+      <h1 class="hero__title">The Daily Grind —<br>Твой идеальный<br>старт дня</h1>
+      <p class="hero__subtitle">Свежеобжаренный кофе, вкусная выпечка<br>и уютная атмосфера.</p>
+      <a href="#menu" class="btn btn--primary">Посмотреть меню</a>
+    </div>
+    <div class="hero__scroll-hint">
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===== MENU ===== -->
+  <section class="section menu" id="menu">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Наши напитки</p>
+        <h2 class="section__title">Популярные позиции</h2>
+        <p class="section__subtitle">Готовим каждую чашку с любовью, используя зёрна из лучших регионов мира.</p>
+      </div>
+
+      <div class="menu__grid">
+
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1572442388796-11668a67e53d?w=600&q=80"
+              alt="Капучино"
+              class="card__img"
+              loading="lazy"
+            />
+            <span class="card__badge">Хит</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Капучино</h3>
+            <p class="card__desc">Нежная молочная пенка, двойной эспрессо и мягкий вкус — классика, которую любят все.</p>
+            <div class="card__footer">
+              <span class="card__price">280 ₽</span>
+              <button class="btn btn--outline btn--sm">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1561047029-3000c68339ca?w=600&q=80"
+              alt="Латте"
+              class="card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Латте</h3>
+            <p class="card__desc">Бархатистое молоко и интенсивный эспрессо создают идеальный баланс для долгого утра.</p>
+            <div class="card__footer">
+              <span class="card__price">300 ₽</span>
+              <button class="btn btn--outline btn--sm">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1510591509098-f4fdc6d0ff04?w=600&q=80"
+              alt="Эспрессо"
+              class="card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Эспрессо</h3>
+            <p class="card__desc">Концентрированный, с плотной крема и ярким ароматом — для ценителей чистого кофейного вкуса.</p>
+            <div class="card__footer">
+              <span class="card__price">180 ₽</span>
+              <button class="btn btn--outline btn--sm">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1517701604599-bb29b565090c?w=600&q=80"
+              alt="Флэт Уайт"
+              class="card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Флэт Уайт</h3>
+            <p class="card__desc">Двойной рестретто с небольшим количеством текстурированного молока — для тех, кто ценит насыщенность.</p>
+            <div class="card__footer">
+              <span class="card__price">320 ₽</span>
+              <button class="btn btn--outline btn--sm">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?w=600&q=80"
+              alt="Круассан"
+              class="card__img"
+              loading="lazy"
+            />
+            <span class="card__badge card__badge--green">Выпечка</span>
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Круассан</h3>
+            <p class="card__desc">Хрустящий снаружи и нежный внутри — выпекается каждое утро прямо у нас на кухне.</p>
+            <div class="card__footer">
+              <span class="card__price">150 ₽</span>
+              <button class="btn btn--outline btn--sm">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card__img-wrap">
+            <img
+              src="https://images.unsplash.com/photo-1504630083234-14187a9df0f5?w=600&q=80"
+              alt="Матча Латте"
+              class="card__img"
+              loading="lazy"
+            />
+          </div>
+          <div class="card__body">
+            <h3 class="card__title">Матча Латте</h3>
+            <p class="card__desc">Японский церемониальный чай матча, взбитый с нежным молоком — деликатная альтернатива кофе.</p>
+            <div class="card__footer">
+              <span class="card__price">350 ₽</span>
+              <button class="btn btn--outline btn--sm">В корзину</button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section class="section about" id="about">
+    <div class="container about__inner">
+      <div class="about__image-wrap">
+        <img
+          src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=800&q=80"
+          alt="Бариста за работой"
+          class="about__img"
+          loading="lazy"
+        />
+        <div class="about__img-badge">
+          <span class="about__img-badge-year">2015</span>
+          <span class="about__img-badge-label">С нами<br>с года</span>
+        </div>
+      </div>
+
+      <div class="about__content">
+        <p class="section__eyebrow">Наша история</p>
+        <h2 class="section__title section__title--left">Больше, чем просто кофейня</h2>
+        <p class="about__text">
+          The Daily Grind родилась в 2015 году из простой идеи: создать место, где каждый
+          может начать день с удовольствием. Мы верим, что хороший кофе — это не просто
+          напиток, а ритуал, заряжающий энергией и вдохновением.
+        </p>
+        <p class="about__text">
+          Наши бариста проходят обучение у лучших мировых мастеров, а зёрна мы обжариваем
+          сами — небольшими партиями, чтобы сохранить каждый оттенок вкуса. Здесь всегда
+          тепло, пахнет свежей выпечкой и звучит хорошая музыка.
+        </p>
+        <ul class="about__features">
+          <li class="about__feature">
+            <span class="about__feature-icon">&#127807;</span>
+            <span>Зёрна из 12 стран</span>
+          </li>
+          <li class="about__feature">
+            <span class="about__feature-icon">&#128197;</span>
+            <span>Открыты каждый день</span>
+          </li>
+          <li class="about__feature">
+            <span class="about__feature-icon">&#11088;</span>
+            <span>Более 2 000 отзывов 5★</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section__header">
+        <p class="section__eyebrow">Свяжитесь с нами</p>
+        <h2 class="section__title">Мы всегда рады</h2>
+        <p class="section__subtitle">Есть вопрос, предложение или хотите забронировать место? Напишите нам!</p>
+      </div>
+
+      <div class="contact__inner">
+
+        <!-- Map placeholder + info -->
+        <div class="contact__info">
+          <div class="map-placeholder" aria-label="Карта расположения">
+            <div class="map-placeholder__pin">
+              <svg viewBox="0 0 24 24" fill="currentColor" width="32" height="32">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5S10.62 6.5 12 6.5s2.5 1.12 2.5 2.5S13.38 11.5 12 11.5z"/>
+              </svg>
+            </div>
+            <p class="map-placeholder__label">Москва, ул. Кофейная, 12</p>
+          </div>
+
+          <ul class="contact__details">
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128205;</span>
+              <div>
+                <strong>Адрес</strong>
+                <p>ул. Кофейная, 12, Москва, 101000</p>
+              </div>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128222;</span>
+              <div>
+                <strong>Телефон</strong>
+                <p><a href="tel:+74951234567">+7 (495) 123-45-67</a></p>
+              </div>
+            </li>
+            <li class="contact__detail">
+              <span class="contact__detail-icon">&#128337;</span>
+              <div>
+                <strong>Часы работы</strong>
+                <p>Пн–Пт: 07:00 – 22:00<br>Сб–Вс: 08:00 – 23:00</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact form -->
+        <form class="contact__form" id="contactForm" novalidate>
+          <div class="form__group">
+            <label for="name" class="form__label">Ваше имя</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              class="form__input"
+              placeholder="Иван Иванов"
+              autocomplete="name"
+            />
+            <span class="form__error" id="nameError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="email" class="form__label">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form__input"
+              placeholder="ivan@example.com"
+              autocomplete="email"
+            />
+            <span class="form__error" id="emailError"></span>
+          </div>
+
+          <div class="form__group">
+            <label for="message" class="form__label">Сообщение</label>
+            <textarea
+              id="message"
+              name="message"
+              class="form__input form__textarea"
+              placeholder="Ваш вопрос или пожелание..."
+              rows="5"
+            ></textarea>
+            <span class="form__error" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Отправить сообщение</button>
+          <p class="form__success" id="formSuccess" aria-live="polite"></p>
+        </form>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <a href="#top" class="logo logo--light">
+        <span class="logo__icon">&#9749;</span>
+        <span class="logo__text">The Daily Grind</span>
+      </a>
+
+      <p class="footer__tagline">Brewing happiness, one cup at a time.</p>
+
+      <div class="footer__socials">
+        <a href="#" class="social" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+        </a>
+        <a href="#" class="social" aria-label="VKontakte">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M15.684 0H8.316C1.592 0 0 1.592 0 8.316v7.368C0 22.408 1.592 24 8.316 24h7.368C22.408 24 24 22.408 24 15.684V8.316C24 1.592 22.408 0 15.684 0zm3.692 17.123h-1.744c-.66 0-.864-.525-2.05-1.727-1.033-1.01-1.49-1.135-1.744-1.135-.356 0-.458.102-.458.593v1.575c0 .424-.135.678-1.253.678-1.846 0-3.896-1.118-5.335-3.202C4.624 10.857 4.03 8.57 4.03 8.096c0-.254.102-.491.593-.491h1.744c.44 0 .61.203.779.678.864 2.49 2.303 4.675 2.896 4.675.22 0 .322-.102.322-.66V9.721c-.068-1.186-.695-1.287-.695-1.71 0-.203.169-.407.44-.407h2.744c.373 0 .508.203.508.643v3.473c0 .372.169.508.271.508.22 0 .407-.136.813-.542 1.253-1.405 2.151-3.574 2.151-3.574.119-.254.322-.491.762-.491h1.744c.525 0 .644.27.525.643-.22 1.017-2.354 4.031-2.354 4.031-.186.305-.254.44 0 .78.186.254.796.779 1.203 1.253.745.847 1.32 1.558 1.473 2.049.17.491-.085.745-.576.745z"/>
+          </svg>
+        </a>
+        <a href="#" class="social" aria-label="Telegram">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+          </svg>
+        </a>
+        <a href="#" class="social" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20">
+            <path d="M23.495 6.205a3.007 3.007 0 0 0-2.088-2.088c-1.87-.501-9.396-.501-9.396-.501s-7.507-.01-9.396.501A3.007 3.007 0 0 0 .527 6.205a31.247 31.247 0 0 0-.522 5.805 31.247 31.247 0 0 0 .522 5.783 3.007 3.007 0 0 0 2.088 2.088c1.868.502 9.396.502 9.396.502s7.506 0 9.396-.502a3.007 3.007 0 0 0 2.088-2.088 31.247 31.247 0 0 0 .5-5.783 31.247 31.247 0 0 0-.5-5.805zM9.609 15.601V8.408l6.264 3.602z"/>
+          </svg>
+        </a>
+      </div>
+
+      <p class="footer__copy">&copy; 2026 The Daily Grind. Все права защищены.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
