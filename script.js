@@ -1,13 +1,7 @@
-/* ============================================================
-   THE DAILY GRIND — SCRIPT
-   ============================================================ */
-
 (function () {
   'use strict';
 
-  /* ----------------------------------------------------------
-     1. SMOOTH SCROLL — nav links
-  ---------------------------------------------------------- */
+
   document.querySelectorAll('a[href^="#"]').forEach(function (anchor) {
     anchor.addEventListener('click', function (e) {
       const targetId = this.getAttribute('href');
@@ -23,14 +17,11 @@
 
       window.scrollTo({ top: targetTop, behavior: 'smooth' });
 
-      // Close mobile menu if open
       closeMobileNav();
     });
   });
 
-  /* ----------------------------------------------------------
-     2. MOBILE NAV TOGGLE
-  ---------------------------------------------------------- */
+
   const navToggle = document.getElementById('navToggle');
   const mainNav   = document.getElementById('mainNav');
 
@@ -49,7 +40,6 @@
     toggleMobileNav(false);
   }
 
-  // Close on Escape key
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape' && mainNav.classList.contains('is-open')) {
       closeMobileNav();
@@ -57,7 +47,6 @@
     }
   });
 
-  // Close when clicking outside nav
   document.addEventListener('click', function (e) {
     if (
       mainNav.classList.contains('is-open') &&
@@ -68,9 +57,6 @@
     }
   });
 
-  /* ----------------------------------------------------------
-     3. HEADER — add shadow on scroll + active nav link
-  ---------------------------------------------------------- */
   const header   = document.querySelector('.header');
   const sections = document.querySelectorAll('section[id], div[id]');
   const navLinks = document.querySelectorAll('.nav__link[href^="#"]');
@@ -98,9 +84,7 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll(); // run once on load
 
-  /* ----------------------------------------------------------
-     4. CONTACT FORM VALIDATION
-  ---------------------------------------------------------- */
+
   const form        = document.getElementById('contactForm');
   const nameInput   = document.getElementById('name');
   const emailInput  = document.getElementById('email');
@@ -110,7 +94,6 @@
   const msgError    = document.getElementById('messageError');
   const formSuccess = document.getElementById('formSuccess');
 
-  // --- Helpers ---
   function setError(input, errorEl, msg) {
     errorEl.textContent = msg;
     input.classList.add('is-invalid');
@@ -127,7 +110,6 @@
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value.trim());
   }
 
-  // --- Live validation (on blur) ---
   nameInput.addEventListener('blur', function () {
     if (this.value.trim().length < 2) {
       setError(this, nameError, 'Введите имя (минимум 2 символа).');
@@ -154,14 +136,13 @@
     }
   });
 
-  // --- Submit validation ---
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     formSuccess.textContent = '';
 
     let valid = true;
 
-    // Name
+
     if (nameInput.value.trim().length < 2) {
       setError(nameInput, nameError, 'Введите имя (минимум 2 символа).');
       valid = false;
@@ -169,7 +150,6 @@
       clearError(nameInput, nameError);
     }
 
-    // Email
     if (!emailInput.value.trim()) {
       setError(emailInput, emailError, 'Введите email.');
       valid = false;
@@ -180,7 +160,6 @@
       clearError(emailInput, emailError);
     }
 
-    // Message
     if (msgInput.value.trim().length < 10) {
       setError(msgInput, msgError, 'Сообщение должно содержать минимум 10 символов.');
       valid = false;
@@ -195,7 +174,6 @@
       return;
     }
 
-    // --- Success simulation ---
     const submitBtn = form.querySelector('[type="submit"]');
     submitBtn.disabled = true;
     submitBtn.textContent = 'Отправляем...';
@@ -206,16 +184,12 @@
       submitBtn.textContent = 'Отправить сообщение';
       formSuccess.textContent = 'Спасибо! Ваше сообщение отправлено. Мы ответим в течение 24 часов.';
 
-      // Clear success message after 6 seconds
       setTimeout(function () {
         formSuccess.textContent = '';
       }, 6000);
     }, 1200);
   });
 
-  /* ----------------------------------------------------------
-     5. SCROLL-IN ANIMATIONS (Intersection Observer)
-  ---------------------------------------------------------- */
   const animateEls = document.querySelectorAll('.card, .about__image-wrap, .about__content, .contact__form, .contact__info');
 
   if ('IntersectionObserver' in window) {
